@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hotel.management.system;
 
 
@@ -11,12 +7,11 @@ package hotel.management.system;
 import java.sql.*;  
 
 public class conn{
-    Connection c;
-    Statement s;
+    Connection c=null;
+    Statement s=null;
     public conn(){  
-        try{  
-            Class.forName("com.mysql.jdbc.Driver");  
-            c =DriverManager.getConnection("jdbc:mysql:///hms","root",""); 
+        try{    
+            c =DriverManager.getConnection("jdbc:mysql://localhost:3306,jdbc","root","Anuj@123"); 
             
             s =c.createStatement();  
             
